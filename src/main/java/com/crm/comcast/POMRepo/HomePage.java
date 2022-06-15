@@ -1,0 +1,78 @@
+package com.crm.comcast.POMRepo;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import Generic_Utilities.WebDriver_Utility;
+
+public class HomePage extends WebDriver_Utility  {
+	
+	//WebDriver driver;
+	
+	//Cross check why this constructor has to be parameterized, what will happen if no parameterized constructor is used 
+	//Check what will happen to the control on driver if the No parameterized construct is used
+	//When we navigate to this page initially what will happen
+	public HomePage(WebDriver driver){
+		//this.driver = driver;
+		PageFactory.initElements(driver, this);
+	}
+	
+	@FindBy (linkText = "Organizations")
+	private WebElement  organizationLink;
+	
+	public WebElement getOrganizationLink() {
+		return organizationLink;
+	}
+	public WebElement getCampaignsLink() {
+		return CampaignsLink;
+	}
+
+	@FindBy (linkText = "Products")
+	private WebElement productsLink;
+	
+	@FindBy (xpath = "//img[@src='themes/softed/images/menuDnArrow.gif']")
+	private WebElement moreLink;
+	
+	@FindBy (name ="Purchase Order")
+	private WebElement purchaseLink;
+	
+	@FindBy (xpath ="//img[@src='themes/softed/images/user.PNG']")
+	private WebElement administratorSignout;
+	
+	@FindBy (linkText ="Sign Out")
+	private WebElement signoutButton;
+	
+	@FindBy (linkText ="Contacts")
+	private WebElement contactsLink;
+	
+	@FindBy (name="Campaigns")
+	private WebElement CampaignsLink;
+	
+	public WebElement getContactsLink() {
+		return contactsLink;
+	}
+	public WebElement getProductsLink() {
+		return productsLink;
+	}
+
+	public WebElement getMoreLink() {
+		return moreLink;
+	}
+
+	public WebElement getPurchaseLink() {
+		return purchaseLink;
+	}
+	
+	public WebElement getAdministratorSignout() {
+		return administratorSignout;
+	}
+
+	public WebElement getSignoutButton() {
+		return signoutButton;
+	}
+	public void administrator() {
+		administratorSignout.click();
+	}	
+}
