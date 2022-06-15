@@ -3,23 +3,16 @@ package com.crm.comcast.contactTest;
 import java.util.List;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
 import com.crm.comcast.POMRepo.ContactsInfoPage;
 import com.crm.comcast.POMRepo.ContactsPage;
 import com.crm.comcast.POMRepo.CreatedCntPage;
 import com.crm.comcast.POMRepo.HomePage;
-import com.crm.comcast.POMRepo.LoginPage;
-
 import Generic_Utilities.Base_Class;
 import Generic_Utilities.Excel_Utility;
 import Generic_Utilities.Java_Utility;
-import Generic_Utilities.PropertyFile_Utility;
-import Generic_Utilities.WebDriver_Utility;
 
 public class DeleteContact_3_Test extends Base_Class {
 	
